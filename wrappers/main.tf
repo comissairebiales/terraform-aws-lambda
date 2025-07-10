@@ -136,4 +136,5 @@ module "wrapper" {
   use_existing_cloudwatch_log_group            = try(each.value.use_existing_cloudwatch_log_group, var.defaults.use_existing_cloudwatch_log_group, false)
   vpc_security_group_ids                       = try(each.value.vpc_security_group_ids, var.defaults.vpc_security_group_ids, null)
   vpc_subnet_ids                               = try(each.value.vpc_subnet_ids, var.defaults.vpc_subnet_ids, null)
+  use_inline_policies                          = try(each.value.use_inline_policies, var.defaults.use_inline_policies, false)
 }

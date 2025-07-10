@@ -662,6 +662,18 @@ variable "file_system_local_mount_path" {
   default     = null
 }
 
+variable "use_inline_policies" {
+  description = "Should inline policies be used or not"
+  type        = bool
+  default     = true
+}
+
+variable "policy_path" {
+  description = "Path of policies to that should be added to IAM role for Lambda Function"
+  type        = string
+  default     = null
+}
+
 ##########################
 # Build artifact settings
 ##########################
